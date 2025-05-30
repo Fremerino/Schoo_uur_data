@@ -11,10 +11,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit();
 }
-$servername = "bsdsghpsfjuwwm24cxeo-mysql.services.clever-cloud.com";
-$username = "usj85unhcp8r8uqi";
-$password = "Kf3AxEqyt2bsNQQvl0Mi";
-$dbname = "bsdsghpsfjuwwm24cxeo";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "uur";
 
 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 

@@ -3,14 +3,14 @@ header('Content-Type: application/json');
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
-// Enable error reporting for debugging
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$servername = "bsdsghpsfjuwwm24cxeo-mysql.services.clever-cloud.com";
-$username = "usj85unhcp8r8uqi";
-$password = "Kf3AxEqyt2bsNQQvl0Mi";
-$dbname = "bsdsghpsfjuwwm24cxeo";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "uur";
 $conn = new mysqli($servername, $username, $password, $dbname);
 $Data_response = array();
 

@@ -12,10 +12,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 
-$servername = "bsdsghpsfjuwwm24cxeo-mysql.services.clever-cloud.com";
-$username = "usj85unhcp8r8uqi";
-$password = "Kf3AxEqyt2bsNQQvl0Mi";
-$dbname = "bsdsghpsfjuwwm24cxeo";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "uur";
 
 
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -31,7 +31,7 @@ $dbname = "bsdsghpsfjuwwm24cxeo";
         $Recipe_id = $data["Recipe_id"];
         $User_id = $data['User_id'];
 
-      
+        // dostat recepty
         $stmt = $conn->prepare("SELECT ID_PERSON FROM recepty WHERE ID = :id");
         $stmt->execute(["id" => $Recipe_id]);
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -43,7 +43,7 @@ $dbname = "bsdsghpsfjuwwm24cxeo";
             $stmt->execute(["id" => $Recipe_id]);
 
             $conn->commit();
-            echo json_encode(["success"]);
+            echo json_encode(["Success"]);
         } else {
             echo json_encode(["Error - not the owner"]);
         }
