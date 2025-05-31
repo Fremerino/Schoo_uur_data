@@ -24,7 +24,7 @@ $Data_response = array();
 
 
 
-$sql = "SELECT ID, NAME, PASSWORD FROM PEOPLE WHERE NAME = '{$name}' AND PASSWORD = '{$password}'";
+$sql = "SELECT ID, NAME, PASSWORD FROM people WHERE NAME = '{$name}' AND PASSWORD = '{$password}'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
